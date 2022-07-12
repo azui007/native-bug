@@ -1,0 +1,87 @@
+[INFO]
+[INFO] --- spring-aot-maven-plugin:0.12.0:generate (generate) @ test-service ---
+2022-07-12 18:33:00.475 | INFO | TID: N/A | remoteIp: | companyCode: | eigyousyoCode: | userId: | org.springframework.aot.build.ContextBootstrapContributor.contribute(ContextBootstrapContributor.java:65) | Detected application class: com.demo.test.MasterApplication
+2022-07-12 18:33:00.478 | INFO | TID: N/A | remoteIp: | companyCode: | eigyousyoCode: | userId: | org.springframework.aot.build.ContextBootstrapContributor.contribute(ContextBootstrapContributor.java:73) | Processing application context
+2022-07-12 18:33:01.937 | INFO | TID: N/A | remoteIp: | companyCode: | eigyousyoCode: | userId: | org.springframework.data.repository.config.RepositoryConfigurationDelegate.multipleStoresDetected(RepositoryConfigurationDelegate.java:262) | Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-12 18:33:01.940 | INFO | TID: N/A | remoteIp: | companyCode: | eigyousyoCode: | userId: | org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:132) | Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-12 18:33:01.963 | INFO | TID: N/A | remoteIp: | companyCode: | eigyousyoCode: | userId: | org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:201) | Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2022-07-12 18:33:05.384 | INFO | TID: N/A | remoteIp: | companyCode: | eigyousyoCode: | userId: | org.springframework.aot.build.ContextBootstrapContributor.contribute(ContextBootstrapContributor.java:82) | Processed 482 bean definitions in 4902ms
+2022-07-12 18:33:05.684 | INFO | TID: N/A | remoteIp: | companyCode: | eigyousyoCode: | userId: | org.springframework.nativex.support.SpringAnalyzer.analyze(SpringAnalyzer.java:83) | Spring Native operating mode: native
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 55 source files to C:\Users\wangg\Desktop\github\native-test\test-master\test-service\target\classes
+[INFO] /C:/Users/wangg/Desktop/github/native-test/test-master/test-service/target/generated-runtime-sources/spring-aot/src/main/java/org/springframework/aot/ContextBootstrapInitializer.java: 某些输入文件使用或覆盖了已过时的 API。
+[INFO] /C:/Users/wangg/Desktop/github/native-test/test-master/test-service/target/generated-runtime-sources/spring-aot/src/main/java/org/springframework/aot/ContextBootstrapInitializer.java: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+[INFO] /C:/Users/wangg/Desktop/github/native-test/test-master/test-service/target/generated-runtime-sources/spring-aot/src/main/java/org/springframework/aot/StaticSpringFactories.java: C:\Users\wangg\Desktop\github\native-test\test-master\test-service\target\generated-runtime-sources\spring-aot\src\main\java\org\springframework\aot\StaticSpringFactories.java使用了未经检查或不安全的操作。
+[INFO] /C:/Users/wangg/Desktop/github/native-test/test-master/test-service/target/generated-runtime-sources/spring-aot/src/main/java/org/springframework/aot/StaticSpringFactories.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/wangg/Desktop/github/native-test/test-master/test-service/target/generated-runtime-sources/spring-aot/src/main/java/org/springframework/cache/annotation/ContextBootstrapInitializer.java:[24,56] 找不到符号
+  符号:   方法 setConfigurers(java.lang.Object)
+  位置: 类型为org.springframework.cache.jcache.config.ProxyJCacheConfiguration的变量 bean
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[ERROR]
+org.apache.maven.plugin.MojoExecutionException: Unable to execute mojo
+    at org.twdata.maven.mojoexecutor.MojoExecutor.executeMojo (MojoExecutor.java:122)
+    at org.springframework.aot.maven.GenerateMojo.compileGeneratedSources (GenerateMojo.java:153)
+    at org.springframework.aot.maven.GenerateMojo.execute (GenerateMojo.java:134)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:301)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:211)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:165)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:157)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:121)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:127)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:294)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:960)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:293)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:196)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+    at org.codehaus.classworlds.Launcher.main (Launcher.java:47)
+Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+/C:/Users/wangg/Desktop/github/native-test/test-master/test-service/target/generated-runtime-sources/spring-aot/src/main/java/org/springframework/cache/annotation/ContextBootstrapInitializer.java:[24,56] 找不到符号
+  符号:   方法 setConfigurers(java.lang.Object)
+  位置: 类型为org.springframework.cache.jcache.config.ProxyJCacheConfiguration的变量 bean
+    at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute (AbstractCompilerMojo.java:1310)
+    at org.apache.maven.plugin.compiler.CompilerMojo.execute (CompilerMojo.java:198)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.twdata.maven.mojoexecutor.MojoExecutor.executeMojo (MojoExecutor.java:120)
+    at org.springframework.aot.maven.GenerateMojo.compileGeneratedSources (GenerateMojo.java:153)
+    at org.springframework.aot.maven.GenerateMojo.execute (GenerateMojo.java:134)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:301)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:211)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:165)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:157)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:121)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:127)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:294)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:960)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:293)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:196)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:568)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+    at org.codehaus.classworlds.Launcher.main (Launcher.java:47)
+[ERROR] [org.twdata.maven.mojoexecutor.MojoExecutor.executeMojo(MojoExecutor.java:122), org.springframework.aot.maven.GenerateMojo.compileGeneratedSources(GenerateMojo.java:153), org.springframework.aot.maven.GenerateMojo.execute(GenerateMojo.java:134), org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137), org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:301), org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:211), org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:165), org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:157), org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:121), org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81), org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56), org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:127), org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:294), org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192), org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105), org.apache.maven.cli.MavenCli.execute(MavenCli.java:960), org.apache.maven.cli.MavenCli.doMain(MavenCli.java:293), org.apache.maven.cli.MavenCli.main(MavenCli.java:196), java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method), java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77), java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43), java.base/java.lang.reflect.Method.invoke(Method.java:568), org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282), org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225), org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406), org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347), org.codehaus.classworlds.Launcher.main(Launcher.java:47)]
