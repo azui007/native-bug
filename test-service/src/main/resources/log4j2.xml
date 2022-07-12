@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="warn">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} | %level | %traceId | remoteIp:%X{ip} | companyCode:%X{companyCode} | eigyousyoCode:%X{eigyousyoCode} | userId:%X{userId} | %l | %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="all">
+            <AppenderRef  ref="Console"/>
+        </Root>
+        <Logger name="com.datastax.driver.core" level="info" />
+        <Logger name="io.netty.util" level="info" />
+    </Loggers>
+</Configuration>

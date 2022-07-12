@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    hikari:
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://localhost:5432/postgres?useUnicode=true&characterEncoding=utf8
+      username: postgres
+      password: root

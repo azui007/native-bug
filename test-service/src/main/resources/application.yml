@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: master-service
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  port: 18084
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.demo.test
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
