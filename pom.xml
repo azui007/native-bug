@@ -19,19 +19,7 @@
     </properties>
 
 
-    <distributionManagement>
-        <repository>
-            <id>public</id>
-            <name>release</name>
-            <url>http://193.160.63.181/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>public</id>
-            <name>snapshot</name>
-            <url>http://193.160.63.181/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
+  
     <build>
         <plugins>
             <plugin>
